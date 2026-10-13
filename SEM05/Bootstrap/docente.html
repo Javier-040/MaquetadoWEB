@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Docente - UNDC</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Colores Personalizados UNDC */
+    .bg-undc-blue { background-color: #002B66 !important; }
+    .bg-undc-yellow { background-color: #FFB800 !important; }
+    .text-undc-blue { color: #002B66 !important; }
+    .text-undc-yellow { color: #FFB800 !important; }
+
+    /* Barra Superior Fija */
+    .topbar {
+      font-size: 0.75rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1030;
+    }
+
+    /* Ajuste para desplegables al pasar el mouse (Hover) */
+    @media (min-width: 992px) {
+      .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+      }
+    }
+
+    /* Degradado sobre la imagen Hero */
+    .hero-image-container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
+    @media (min-width: 768px) {
+      .hero-image-container {
+        width: 50%;
+      }
+    }
+    .hero-gradient-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, #002B66 0%, rgba(0, 43, 102, 0.7) 50%, transparent 100%);
+    }
+  </style>
+</head>
+
+<body class="bg-light d-flex flex-column min-vh-100">
+
+  <!-- 2. NAVEGACIÓN PRINCIPAL -->
+  <nav class="navbar navbar-expand-lg bg-undc-yellow navbar-light font-weight-bold p-0 shadow-sm relative-z-40">
+    <div class="container-fluid px-4">
+      <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav text-uppercase fw-bold text-dark" style="font-size: 0.85rem;">
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="index.html">INICIO</a>
+          </li>
+
+          <!-- SEMANA 01 -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark" href="../../index.html" role="button">SEMANA 01</a>
+            <ul class="dropdown-menu border-0 shadow">
+              <li><a class="dropdown-item small font-weight-semibold" href="../../index.html">Etiquetas</a></li>
+            </ul>
+          </li>
+
+          <!-- SEMANA 02 -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark" href="../../SEM02/HTML5.html" role="button">SEMANA 02</a>
+            <ul class="dropdown-menu border-0 shadow">
+              <li><a class="dropdown-item small font-weight-semibold" href="../../SEM02/HTML5.html">Portafolio (HTML)</a></li>
+            </ul>
+          </li>
+
+          <!-- SEMANA 03 -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark" href="../../SEM03/folio.html" role="button">SEMANA 03</a>
+            <ul class="dropdown-menu border-0 shadow">
+              <li><a class="dropdown-item small font-weight-semibold" href="../../SEM03/portafolio.html">Portafolio (CSS)</a></li>
+              <li><a class="dropdown-item small font-weight-semibold" href="../../SEM03/folio.html">Portafolio (IA)</a></li>
+            </ul>
+          </li>
+
+          <!-- SEMANA 04 -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark" href="#" role="button">SEMANA 04</a>
+            <ul class="dropdown-menu border-0 shadow">
+              <li><a class="dropdown-item small font-weight-semibold" href="../../SEM04/fomrulario.html">JavaScript (Formulario)</a></li>
+              <li><a class="dropdown-item small font-weight-semibold" href="../../SEM04/teclado.html">JavaScript (Teclado)</a></li>
+            </ul>
+          </li>
+
+          <!-- SEMANA 05 -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark" href="index.html" role="button">SEMANA 05</a>
+            <ul class="dropdown-menu border-0 shadow">
+              <li><a class="dropdown-item small font-weight-semibold" href="index.html">Bootstrap</a></li>
+              <li><a class="dropdown-item small font-weight-semibold" href="../JS/index.html">JavaScript</a></li>
+            </ul>
+          </li>
+
+          <!-- SEMANA 06 -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark" href="#" role="button">SEMANA 06</a>
+            <ul class="dropdown-menu border-0 shadow">
+              <li><a class="dropdown-item small font-weight-semibold" href="../../SEM06/TAILWIND/index.html">Tailwind</a></li>
+            </ul>
+          </li>
+
+          <!-- SEMANA 07 -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark" href="#" role="button">SEMANA 07</a>
+            <ul class="dropdown-menu border-0 shadow">
+              <li><a class="dropdown-item small font-weight-semibold" href="../../SEM07/React/proyecto-react/index.html">React</a></li>
+              <li><a class="dropdown-item small font-weight-semibold" href="../../SEM07/Vue/proyecto-vue/index.html">Vite</a></li>
+              <li><a class="dropdown-item small font-weight-semibold" href="../../SEM07/angular/proyecto-angular/src/index.html">Angular</a></li>
+            </ul>
+          </li>
+
+          <!-- SEMANA 08 -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark" href="#" role="button">PARCIAL</a>
+            <ul class="dropdown-menu border-0 shadow">
+              <li><a class="dropdown-item small font-weight-semibold" href="../../PARCIAL/formulario.html">Formulario</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 3. HERO SECTION (100% ANCHO CON DEGRADADO) -->
+  <section class="position-relative w-100 bg-undc-blue text-white overflow-hidden d-flex align-items-center" style="min-height: 480px;">
+    <!-- Imagen a la derecha con degradado -->
+    <div class="hero-image-container">
+      <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80" 
+           alt="Docente UNDC" 
+           class="w-100 h-100 object-fit-cover" />
+      <div class="hero-gradient-overlay"></div>
+    </div>
+
+    <!-- Contenido de Texto a la Izquierda -->
+    <div class="container position-relative z-1 py-5">
+      <div class="row">
+        <div class="col-lg-6">
+          <span class="badge bg-undc-yellow text-dark fw-bold text-uppercase mb-3 px-3 py-2 shadow-sm" style="font-size: 0.75rem;">
+            Portal Académico
+          </span>
+          <h1 class="display-5 fw-bold text-white mb-3">
+            Plataforma de Gestión Docente
+          </h1>
+          <p class="text-light lead mb-4" style="font-size: 1rem;">
+            Espacio exclusivo para el personal docente universitario de la UNDC. Desde aquí podrá administrar el contenido académico de sus asignaturas, registrar notas en el sistema SIVIRENO, subir sílabos y realizar el seguimiento continuo del aprendizaje de los estudiantes.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#" class="btn btn-warning bg-undc-yellow fw-bold text-uppercase text-dark px-4 py-2 shadow">
+              Aula Virtual (Moodle)
+            </a>
+            <a href="#" class="btn btn-outline-light fw-bold text-uppercase px-4 py-2">
+              Sistema SIVIRENO
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. SECCIÓN INFERIOR DE SERVICIOS E INFORMACIÓN -->
+  <main class="container py-5 flex-grow-1">
+    <h2 class="h4 fw-bold text-uppercase mb-1 text-dark">Servicios e Información Académica</h2>
+    <div class="bg-undc-yellow mb-4" style="width: 50px; height: 4px;"></div>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm p-3">
+          <div class="card-body">
+            <div class="fs-1 mb-2">📋</div>
+            <h5 class="card-title fw-bold text-undc-blue">Carga Lectiva y Horarios</h5>
+            <p class="card-text text-muted small">
+              Revise la asignación de sus cursos, aula asignada, distribución de horas lectivas y no lectivas del semestre actual.
+            </p>
+            <a href="#" class="fw-bold text-decoration-none text-primary small">Ver Horario ➔</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm p-3">
+          <div class="card-body">
+            <div class="fs-1 mb-2">📑</div>
+            <h5 class="card-title fw-bold text-undc-blue">Formato de Sílabos</h5>
+            <p class="card-text text-muted small">
+              Descargue la plantilla oficial para la elaboración del sílabo bajo el enfoque por competencias aprobado por la UNDC.
+            </p>
+            <a href="#" class="fw-bold text-decoration-none text-primary small">Descargar Plantilla ➔</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm p-3">
+          <div class="card-body">
+            <div class="fs-1 mb-2">🔬</div>
+            <h5 class="card-title fw-bold text-undc-blue">Investigación y Publicaciones</h5>
+            <p class="card-text text-muted small">
+              Acceso al repositorio institucional, convocatorias de proyectos de investigación y normas de publicación.
+            </p>
+            <a href="#" class="fw-bold text-decoration-none text-primary small">Ir a Investigación ➔</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-secondary py-3 text-center small mt-auto">
+    <div class="container">
+      <p class="m-0">© Todos los derechos reservados - Universidad Nacional de Cañete</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
