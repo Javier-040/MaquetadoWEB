@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Document</title>
+</head>
+<body>
+    <h1>Javascript Fomrulario</h1>
+<form id="formulario">
+<input id="nombre" type="text" />
+<button type="submit">Guardar</button>
+</form>
+
+<script>
+const formulario = document.getElementById("formulario");
+formulario.addEventListener("submit", (evento) => {
+evento.preventDefault(); // evita que la página se recargue
+const nombre = document.getElementById("nombre").value; // obtiene el valor del input
+alert("Dato guardado!");
+console.log("Nombre:", nombre); // muestra el dato en consola
+});
+</script>
+
+<div>
+    <p><h2>Sem 01</h2>
+        <a href="index.html">Go to index </a>
+    </p>
+    <p><h2>Sem 02</h2>
+      <a href="/DESARROLLO-WEB/SEM02/HTML5.html">Go to HTML5 (Portafolio) </a>
+</p>
+<p><h2>Sem 03</h2>
+      <a href="/DESARROLLO-WEB/SEM03/portafolio.html">Go to CSS (Portafolio) </a>
+    <a href="/DESARROLLO-WEB/SEM03/folio.html">Go to Portafolio IA</a>
+</p>
+<p> <h2>Semo 04</h2>
+    <a href="/DESARROLLO-WEB/SEM04/fomrulario.html">Go to JavaScript  </a>
+        <p><h2>Sem 05</h2>
+        <a href="/DESARROLLO-WEB/SEM05/Bootstrap/index.html">Go to Bootstrap </a>
+    </p>
+    <p><h2>Sem 06</h2>
+      <a href="/DESARROLLO-WEB/SEM06/TAILWIND/index.html">Go to Tailwind </a>
+</p>
+<p><h2>Sem 07</h2>
+      <a href="/DESARROLLO-WEB/SEM07/angular/proyecto-angular/src/index.html">Go to Angular </a>
+</p>
+<p> <h2>Parcial</h2>
+    <a href="/DESARROLLO-WEB/PARCIAL/formulario.html">Go to Formulario  </a>
+
+</p>
+</div>
+
+</body>
+</html>
