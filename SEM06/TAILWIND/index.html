@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Universidad Nacional de Cañete - UNDC</title>
+
+  <!-- Tailwind CSS por CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Swiper.js CSS (Para el carrusel) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <style>
+    /* Estilos para los botones del carrusel */
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #ffffff !important;
+      background: rgba(0, 0, 0, 0.4);
+      width: 44px !important;
+      height: 44px !important;
+      border-radius: 50%;
+      backdrop-filter: blur(4px);
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      font-size: 16px !important;
+      font-weight: bold;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #FFB800 !important;
+      width: 26px !important;
+      border-radius: 6px !important;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 font-sans text-gray-800 flex flex-col min-h-screen">
+
+  <!-- 1. BARRA SUPERIOR (TOPBAR AZUL) -->
+  <header class="bg-[#002B66] text-white text-xs fixed w-full z-50 top-0 left-0">
+    <div class="container mx-auto px-4 py-2 flex flex-wrap justify-between items-center gap-2">
+      <div class="flex flex-wrap gap-x-4 gap-y-1">
+        <span>Directorio Telefónico</span> |
+        <span>Mesa de Partes: 993573589</span> |
+        <span>CePre: 967 279 159</span> |
+        <span>Admisión: 967 279 139</span>
+      </div>
+      <!-- Botones / Enlaces superiores -->
+      <div class="flex flex-wrap gap-2">
+        <a href="docente.html" class="bg-red-600 text-white px-2 py-1 rounded font-semibold text-[11px]">DOCENTE</a>
+        <a href="administrativo.html" class="bg-red-700 text-white px-2 py-1 rounded font-semibold text-[11px]">ADMINISTRATIVO</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Espaciador compensatorio para la topbar fija -->
+  <div class="h-[33px]"></div>
+
+  <!-- 2. NAVEGACIÓN PRINCIPAL (MENÚ AMARILLO CON DESPLEGABLES) -->
+  <nav class="bg-[#FFB800] text-black font-bold text-sm uppercase tracking-wide relative z-40 shadow-md">
+    <div class="container mx-auto px-4 flex flex-wrap justify-center md:justify-start gap-6 py-3">
+      <a href="index.html" class="hover:underline py-1">INICIO</a>
+
+      <!--  SEMANA 01 -->
+      <div class="relative group">
+        <button class="hover:underline flex items-center gap-1 py-1 focus:outline-none">
+          SEMANA 01 ▾
+        </button>
+        <!-- Submenú -->
+        <div
+          class="absolute left-0 mt-0 w-48 bg-white text-gray-800 rounded shadow-lg py-2 hidden group-hover:block border border-gray-200">
+          <a href="../../index.html" class="block px-4 py-2 text-xs font-semibold hover:bg-yellow-100 hover:text-black">Etiquetas</a>
+        </div>
+      </div>
+
+      <!-- SEMANA 02 -->
+      <div class="relative group">
+        <button class="hover:underline flex items-center gap-1 py-1 focus:outline-none">
+          SEMANA 02 ▾
+        </button>
+        <!-- Submenú -->
+        <div
+          class="absolute left-0 mt-0 w-48 bg-white text-gray-800 rounded shadow-lg py-2 hidden group-hover:block border border-gray-200">
+          <a href="../../SEM02/HTML5.html" class="block px-4 py-2 text-xs font-semibold hover:bg-yellow-100 hover:text-black">Portafolio (HTML)</a>
+        </div>
+      </div>
+
+      <!-- SEMANA 03 ) -->
+      <div class="relative group">
+        <button class="hover:underline flex items-center gap-1 py-1 focus:outline-none">
+          SEMANA 03 ▾
+        </button>
+        <!-- Submenú -->
+        <div
+          class="absolute left-0 mt-0 w-48 bg-white text-gray-800 rounded shadow-lg py-2 hidden group-hover:block border border-gray-200">
+          <a href="../../SEM03/portafolio.html" class="block px-4 py-2 text-xs font-semibold hover:bg-yellow-100 hover:text-black">Portafolio (CSS)</a>
+          <a href="../../SEM03/folio.html" class="block px-4 py-2 text-xs font-semibold hover:bg-yellow-100 hover:text-black">Portafolio (IA)</a>
+        </div>
+      </div>
+
+      <!-- SEMANA 04 -->
+      <div class="relative group">
+        <button class="hover:underline flex items-center gap-1 py-1 focus:outline-none">
+          SEMANA 04▾
+        </button>
+        <!-- Submenú -->
+        <div
+          class="absolute left-0 mt-0 w-48 bg-white text-gray-800 rounded shadow-lg py-2 hidden group-hover:block border border-gray-200">
+          <a href="../../SEM04/fomrulario.html" class="block px-4 py-2 text-xs font-semibold hover:bg-yellow-100 hover:text-black">JavaScript
+            (Fomrulario)</a>
+          <a href="../../SEM04/teclado.html" class="block px-4 py-2 text-xs font-semibold hover:bg-yellow-100 hover:text-black">JavaScript (Teclado)
+            </a>
+        </div>
+      </div>
+
+      <!-- SEMANA 05 -->
+      <div class="relative group">
+        <button class="hover:underline flex items-center gap-1 py-1 focus:outline-none">
+          SEMANA 05 ▾
+        </button>
+        <!-- Submenú -->
+        <div
+          class="absolute left-0 mt-0 w-48 bg-white text-gray-800 rounded shadow-lg py-2 hidden group-hover:block border border-gray-200">
+          <a href="../../SEM05/Bootstrap/index.html" class="block px-4 py-2 text-xs font-semibold hover:bg-yellow-100 hover:text-black">Bootstrap</a>
+           </div>
+      </div>
+
+      <!-- SEMANA 06 -->
+      <div class="relative group">
+        <button class="hover:underline flex items-center gap-1 py-1 focus:outline-none">
+          SEMANA 06 ▾
+        </button>
+        <!-- Submenú -->
+        <div
+          class="absolute left-0 mt-0 w-48 bg-white text-gray-800 rounded shadow-lg py-2 hidden group-hover:block border border-gray-200">
+          <a href="../../SEM06/TAILWIND/index.html" class="block px-4 py-2 text-xs font-semibold hover:bg-yellow-100 hover:text-black">Tailwind</a>
+        </div>
+      </div>
+      <!-- SEMANA 07 -->
+      <div class="relative group">
+        <button class="hover:underline flex items-center gap-1 py-1 focus:outline-none">
+          SEMANA 07 ▾
+        </button>
+        <!-- Submenú -->
+        <div
+          class="absolute left-0 mt-0 w-48 bg-white text-gray-800 rounded shadow-lg py-2 hidden group-hover:block border border-gray-200">
+          <a href="../../SEM07/angular/proyecto-angular/src/index.html" class="block px-4 py-2 text-xs font-semibold hover:bg-yellow-100 hover:text-black">Tailwind</a>
+        </div>
+      </div>
+
+      <!-- SEMANA 07 -->
+      <div class="relative group">
+        <button class="hover:underline flex items-center gap-1 py-1 focus:outline-none">
+          SEMANA 07 ▾
+        </button>
+        <!-- Submenú -->
+        <div
+          class="absolute left-0 mt-0 w-48 bg-white text-gray-800 rounded shadow-lg py-2 hidden group-hover:block border border-gray-200">
+          <a href="../../PARCIAL/formulario.html" class="block px-4 py-2 text-xs font-semibold hover:bg-yellow-100 hover:text-black">Tailwind</a>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- 3. HERO / BANNER PRINCIPAL (CARRUSEL AJUSTADO) -->
+  <section class="relative w-full h-[calc(100vh-100px)]">
+    <div class="swiper mySwiper w-full h-full">
+      <div class="swiper-wrapper">
+
+        <!-- SLIDE 1 -->
+        <div class="swiper-slide relative w-full h-full">
+          <img
+            src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SxD-eAXvRE3ENKLHjvPJjYUWU7Rq-gPQO5_Www7kRJdgUxe97qQid0hy46Lsbs2u6oLPJLYiMZAqnwu5wAc0XE_cd3NrWZpUjuPIwOgKk23inKoAkWK-mqlzV_qVxGZjzABSAP=s1360-w1360-h1020-rw"
+            alt="Campus UNDC" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-black/50 flex items-center">
+            <div class="container mx-auto px-6 text-white">
+              <span class="inline-block bg-[#FFB800] text-black text-xs px-3 py-1 font-bold uppercase rounded mb-3">
+                Bienvenidos a la UNDC
+              </span>
+              <h1 class="text-3xl md:text-5xl font-extrabold max-w-2xl leading-tight mb-4">
+                Universidad Nacional de Cañete
+              </h1>
+              <p class="text-base md:text-lg text-gray-200 max-w-lg">
+                Educación superior de calidad e innovación tecnológica al servicio del país.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="swiper-slide relative w-full h-full">
+          <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1920&q=80"
+            alt="Estudiantes UNDC" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-black/50 flex items-center">
+            <div class="container mx-auto px-6 text-white">
+              <span class="inline-block bg-[#FFB800] text-black text-xs px-3 py-1 font-bold uppercase rounded mb-3">
+                Comunidad Académica
+              </span>
+              <h1 class="text-3xl md:text-5xl font-extrabold max-w-2xl leading-tight mb-4">
+                Gestión Docente y Administrativa
+              </h1>
+              <p class="text-base md:text-lg text-gray-200 max-w-lg">
+                Accede a nuestras plataformas institucionales de consulta y gestión rápida.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="swiper-slide relative w-full h-full">
+          <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1920&q=80"
+            alt="Biblioteca e Investigacion" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-black/50 flex items-center">
+            <div class="container mx-auto px-6 text-white">
+              <span class="inline-block bg-[#FFB800] text-black text-xs px-3 py-1 font-bold uppercase rounded mb-3">
+                Investigación
+              </span>
+              <h1 class="text-3xl md:text-5xl font-extrabold max-w-2xl leading-tight mb-4">
+                Compromiso con el Conocimiento
+              </h1>
+              <p class="text-base md:text-lg text-gray-200 max-w-lg">
+                Formando líderes y profesionales para el desarrollo científico y social.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- FLECHAS Y PAGINACIÓN -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!-- 4. SECCIÓN DE EVENTOS -->
+  <section class="container mx-auto px-4 py-10">
+    <h2 class="text-2xl font-bold tracking-wide uppercase mb-2">EVENTOS</h2>
+    <div class="w-12 h-1 bg-gray-400 mb-6"></div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <!-- Evento Destacado (Banner Izquierda) -->
+      <div class="bg-white rounded border shadow p-4 flex flex-col justify-between">
+        <div class="bg-blue-50 p-6 rounded text-center border">
+          <h3 class="text-xl font-bold text-blue-900">Ceremonia de Inicio del Semestre Académico 2026-II</h3>
+          <p class="text-sm text-gray-600 mt-2">La Universidad Nacional de Cañete tiene el honor de invitar a usted a la
+            Ceremonia de Inicio del Semestre Académico.</p>
+          <div class="mt-6 inline-block bg-white border font-bold text-gray-800 px-4 py-2 rounded">
+            Lunes <span class="text-2xl font-extrabold">24</span> Agosto - 8:00 a.m.
+          </div>
+        </div>
+      </div>
+
+      <!-- Lista de Eventos Secundarios (Derecha) -->
+      <div class="flex flex-col gap-4">
+        <!-- Evento 1 -->
+        <div class="flex items-center bg-white p-3 rounded shadow border gap-4">
+          <div class="text-center px-3">
+            <span class="block text-2xl font-bold text-gray-800">24</span>
+            <span class="text-xs uppercase text-gray-500">JUN, 2026</span>
+          </div>
+          <div class="w-16 h-12 bg-blue-100 flex items-center justify-center rounded text-xs text-blue-700 font-bold">
+            IMG</div>
+          <div>
+            <h4 class="font-bold text-sm uppercase">V SIMPOSIO NACIONAL E INTERNACIONAL EN INNOVACIÓN AGROPECUARIA</h4>
+            <span class="text-xs text-gray-400">9:37 am</span>
+          </div>
+        </div>
+
+        <!-- Evento 2 -->
+        <div class="flex items-center bg-white p-3 rounded shadow border gap-4">
+          <div class="text-center px-3">
+            <span class="block text-2xl font-bold text-gray-800">13</span>
+            <span class="text-xs uppercase text-gray-500">MAR, 2026</span>
+          </div>
+          <div
+            class="w-16 h-12 bg-yellow-100 flex items-center justify-center rounded text-xs text-yellow-700 font-bold">
+            IMG</div>
+          <div>
+            <h4 class="font-bold text-sm uppercase">PRIMERA CEREMONIA DE COLACIÓN 2026</h4>
+            <span class="text-xs text-gray-400">10:00 am</span>
+          </div>
+        </div>
+
+        <!-- Evento 3 -->
+        <div class="flex items-center bg-white p-3 rounded shadow border gap-4">
+          <div class="text-center px-3">
+            <span class="block text-2xl font-bold text-gray-800">03</span>
+            <span class="text-xs uppercase text-gray-500">FEB, 2026</span>
+          </div>
+          <div class="w-16 h-12 bg-green-100 flex items-center justify-center rounded text-xs text-green-700 font-bold">
+            IMG</div>
+          <div>
+            <h4 class="font-bold text-sm uppercase">DÍA MUNDIAL DE LOS HUMEDALES - UNDC 2026</h4>
+            <span class="text-xs text-gray-400">12:00 am</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. SECCIÓN DE NOTICIAS -->
+  <section class="container mx-auto px-4 py-10">
+    <h2 class="text-2xl font-bold tracking-wide uppercase mb-2">NOTICIAS</h2>
+    <div class="w-12 h-1 bg-gray-400 mb-6"></div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Noticia 1 -->
+      <div class="bg-white rounded shadow overflow-hidden border">
+        <div class="h-48 bg-gray-300 flex items-center justify-center text-gray-500 font-bold">
+          [Imagen Noticia 1]
+        </div>
+        <div class="bg-[#FFB800] text-[10px] font-bold px-3 py-1 uppercase text-black inline-block">
+          ADMIN • 31 AGOSTO, 2026
+        </div>
+        <div class="p-4">
+          <h3 class="font-bold text-sm uppercase text-gray-800">
+            RECTOR DE LA UNDC PARTICIPÓ EN PRESENTACIÓN OFICIAL DEL GOBERNADOR REGIONAL DE LIMA
+          </h3>
+        </div>
+      </div>
+
+      <!-- Noticia 2 -->
+      <div class="bg-white rounded shadow overflow-hidden border">
+        <div class="h-48 bg-gray-300 flex items-center justify-center text-gray-500 font-bold">
+          [Imagen Noticia 2]
+        </div>
+        <div class="bg-[#FFB800] text-[10px] font-bold px-3 py-1 uppercase text-black inline-block">
+          ADMIN • 25 AGOSTO, 2026
+        </div>
+        <div class="p-4">
+          <h3 class="font-bold text-sm uppercase text-gray-800">
+            UNIVERSIDAD NACIONAL DE CAÑETE DIO INICIO AL SEMESTRE ACADÉMICO 2026-II
+          </h3>
+        </div>
+      </div>
+
+      <!-- Noticia 3 -->
+      <div class="bg-white rounded shadow overflow-hidden border">
+        <div class="h-48 bg-gray-300 flex items-center justify-center text-gray-500 font-bold">
+          [Imagen Noticia 3]
+        </div>
+        <div class="bg-[#FFB800] text-[10px] font-bold px-3 py-1 uppercase text-black inline-block">
+          ADMIN • 20 AGOSTO, 2026
+        </div>
+        <div class="p-4">
+          <h3 class="font-bold text-sm uppercase text-gray-800">
+            RECTOR DE LA UNDC PARTICIPÓ EN CEREMONIA PROTOCOLAR PRESIDIDA POR LA PRESIDENTA DEL PODER JUDICIAL
+          </h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. FOOTER (SIMPLIFICADO) -->
+  <footer class="bg-[#111827] text-gray-400 py-6 text-center text-xs mt-auto">
+    <div class="container mx-auto px-4">
+      <p>© Todos los derechos reservados - Universidad Nacional de Cañete</p>
+    </div>
+  </footer>
+
+  <!-- Swiper.js JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Inicialización del Carrusel -->
+  <script>
+    const swiper = new Swiper('.mySwiper', {
+      loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+
+</body>
+
+</html>
